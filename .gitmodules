@@ -1,0 +1,3 @@
+[submodule "fallen-core"]
+	path = fallen-core
+	url = ./fallen-core/
