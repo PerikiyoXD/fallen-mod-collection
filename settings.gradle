@@ -1,1 +1,1 @@
-include 'fallen-core'
+include 'fallen-core', 'fallen-metals', 'fallen-ui'

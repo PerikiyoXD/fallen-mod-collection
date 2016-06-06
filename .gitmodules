@@ -1,3 +1,9 @@
 [submodule "fallen-core"]
 	path = fallen-core
 	url = ./fallen-core/
+[submodule "fallen-metals"]
+	path = fallen-metals
+	url = ./fallen-metals/
+[submodule "fallen-ui"]
+	path = fallen-ui
+	url = ./fallen-ui/
