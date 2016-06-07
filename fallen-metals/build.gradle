@@ -1,0 +1,7 @@
+group = "com.thefallenmoon.fmc.metals"
+archivesBaseName = "fmc.metals"
+
+dependencies {
+    compile project(":fallen-core")
+    compile project(":fallen-ui")
+}

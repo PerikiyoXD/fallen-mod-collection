@@ -1,0 +1,6 @@
+group = "com.thefallenmoon.fmc.core"
+archivesBaseName = "fmc.core"
+
+dependencies {
+
+}

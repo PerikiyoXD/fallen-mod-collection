@@ -1,0 +1,16 @@
+[{
+  "modid": "fmc.metals",
+  "name": "Fallen Metals",
+  "description": "Metal alloying system",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Pwootage"],
+  "credits": "FallenMoon guys, Mojang for making Minecraft",
+  "logoFile": "",
+  "screenshots": [],
+  "requiredMods": ["fmc.core", "fmc.ui"],
+  "dependencies": ["fmc.core", "fmc.ui"],
+  "useDependencyInformation": true
+}]

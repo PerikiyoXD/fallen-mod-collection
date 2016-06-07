@@ -1,0 +1,14 @@
+[{
+  "modid": "fmc.core",
+  "name": "Fallen Core",
+  "description": "Common classes for the Fallen Mod Collection",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Pwootage"],
+  "credits": "FallenMoon guys, Mojang for making Minecraft",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}]
