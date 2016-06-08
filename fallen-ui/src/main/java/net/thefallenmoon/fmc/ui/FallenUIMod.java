@@ -22,12 +22,12 @@ public class FallenUIMod {
 
     @SidedProxy(
             clientSide = "net.thefallenmoon.fmc.ui.proxy.ClientProxy",
-            serverSide = "t.thefallenmoon.fmc.ui.proxy.CommonProxy"
+            serverSide = "net.thefallenmoon.fmc.ui.proxy.CommonProxy"
     )
     public static CommonProxy proxy;
 
     @EventHandler
-    public void preinit(FMLPreInitializationEvent event) {
+    public void preInit(FMLPreInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new KeyInputHandler());
         MinecraftForge.EVENT_BUS.register(new PlayerTickHandler());
     }

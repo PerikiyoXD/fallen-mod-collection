@@ -4,13 +4,13 @@
   "description": "Material design UI replacement for Minecraft",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://www.thefallenmoon.net/",
   "updateUrl": "",
   "authorList": ["Pwootage"],
   "credits": "FallenMoon guys, Mojang for making Minecraft",
-  "logoFile": "",
+  "logoFile": "/logo.png",
   "screenshots": [],
-  "requiredMods": ["fmc.core",],
+  "requiredMods": ["fmc.core"],
   "dependencies": ["fmc.core"],
   "useDependencyInformation": true
 }]
