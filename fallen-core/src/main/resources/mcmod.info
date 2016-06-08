@@ -4,11 +4,11 @@
   "description": "Common classes for the Fallen Mod Collection",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://www.thefallenmoon.net/",
   "updateUrl": "",
   "authorList": ["Pwootage"],
   "credits": "FallenMoon guys, Mojang for making Minecraft",
-  "logoFile": "",
+  "logoFile": "/logo.png",
   "screenshots": [],
   "dependencies": []
 }]
