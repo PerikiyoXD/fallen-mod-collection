@@ -1,5 +1,5 @@
 [{
-  "modid": "fmc.ui",
+  "modid": "fmc-ui",
   "name": "Fallen UI",
   "description": "Material design UI replacement for Minecraft",
   "version": "${version}",
@@ -10,7 +10,7 @@
   "credits": "FallenMoon guys, Mojang for making Minecraft",
   "logoFile": "/logo.png",
   "screenshots": [],
-  "requiredMods": ["fmc.core"],
-  "dependencies": ["fmc.core"],
+  "requiredMods": ["fmc-core"],
+  "dependencies": ["fmc-core"],
   "useDependencyInformation": true
 }]

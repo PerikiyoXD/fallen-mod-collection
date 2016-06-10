@@ -1,5 +1,5 @@
 group = "com.thefallenmoon.fmc.ui"
-archivesBaseName = "fmc.ui"
+archivesBaseName = "fmc-ui"
 
 dependencies {
     compile project(":fallen-core")

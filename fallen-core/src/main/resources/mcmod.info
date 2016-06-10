@@ -1,5 +1,5 @@
 [{
-  "modid": "fmc.core",
+  "modid": "fmc-core",
   "name": "Fallen Core",
   "description": "Common classes for the Fallen Mod Collection",
   "version": "${version}",
