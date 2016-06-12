@@ -77,4 +77,14 @@ public class RelativeComponentBounds implements ComponentBounds {
     public float getHeight() {
         return height;
     }
+
+    @Override
+    public float getEndX() {
+        return getX() + getWidth();
+    }
+
+    @Override
+    public float getEndY() {
+        return getY() + getHeight();
+    }
 }

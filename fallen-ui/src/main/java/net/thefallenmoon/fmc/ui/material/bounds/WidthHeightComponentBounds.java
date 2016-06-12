@@ -2,13 +2,13 @@ package net.thefallenmoon.fmc.ui.material.bounds;
 
 import net.thefallenmoon.fmc.ui.material.ComponentBounds;
 
-public class BasicComponentBounds implements ComponentBounds {
+public class WidthHeightComponentBounds implements ComponentBounds {
     private final float x;
     private final float y;
     private final float width;
     private final float height;
 
-    public BasicComponentBounds(float x, float y, float width, float height) {
+    public WidthHeightComponentBounds(float x, float y, float width, float height) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -33,5 +33,15 @@ public class BasicComponentBounds implements ComponentBounds {
     @Override
     public float getHeight() {
         return height;
+    }
+
+    @Override
+    public float getEndX() {
+        return x + width;
+    }
+
+    @Override
+    public float getEndY() {
+        return y + height;
     }
 }

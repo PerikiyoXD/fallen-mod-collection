@@ -1,8 +1,5 @@
 package net.thefallenmoon.fmc.ui.material;
 
-/**
- * Created by pwootage on 6/8/16.
- */
 public interface ComponentBounds {
     float getX();
 
@@ -11,4 +8,8 @@ public interface ComponentBounds {
     float getWidth();
 
     float getHeight();
+
+    float getEndX();
+
+    float getEndY();
 }

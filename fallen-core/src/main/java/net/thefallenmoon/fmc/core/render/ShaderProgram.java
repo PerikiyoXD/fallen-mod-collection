@@ -12,10 +12,18 @@ public class ShaderProgram {
     private int programID;
 
     public ShaderProgram(String vertSrc, String fragSrc) {
+        compileShaderSource(vertSrc, fragSrc);
+    }
+
+    public void compileShaderSource(String vertSrc, String fragSrc) {
+        if (programID != 0) {
+            glDeleteProgram(programID);
+        }
+        programID = glCreateProgram();
+
         int vertShader = compileShader(vertSrc, GL_VERTEX_SHADER);
         int fragShader = compileShader(fragSrc, GL_FRAGMENT_SHADER);
 
-        programID = glCreateProgram();
         glAttachShader(programID, vertShader);
         glAttachShader(programID, fragShader);
         glLinkProgram(programID);
