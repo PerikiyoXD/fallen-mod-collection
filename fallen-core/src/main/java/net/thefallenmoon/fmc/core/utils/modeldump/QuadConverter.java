@@ -1,5 +1,6 @@
 package net.thefallenmoon.fmc.core.utils.modeldump;
 
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.VertexFormat;
 import net.minecraft.client.renderer.vertex.VertexFormatElement;
 import net.minecraft.util.EnumFacing;
@@ -74,4 +75,10 @@ public class QuadConverter extends QuadGatheringTransformer{
     public void setApplyDiffuseLighting(boolean b) {
 
     }
+
+	@Override
+	public void setTexture(TextureAtlasSprite texture) {
+		// TODO Auto-generated method stub
+		
+	}
 }

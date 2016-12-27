@@ -1,7 +1,5 @@
 package net.thefallenmoon.fmc.core.utils.modeldump;
 
-import net.minecraft.util.EnumFacing;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

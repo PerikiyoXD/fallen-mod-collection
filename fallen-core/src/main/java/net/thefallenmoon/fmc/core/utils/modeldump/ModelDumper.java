@@ -1,7 +1,20 @@
 package net.thefallenmoon.fmc.core.utils.modeldump;
 
-import com.google.common.base.Predicates;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.StreamSupport;
+
+import javax.imageio.ImageIO;
+
 import com.google.gson.Gson;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -12,24 +25,10 @@ import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.command.ICommandSender;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ObjectIntIdentityMap;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.registry.GameData;
 import net.thefallenmoon.fmc.core.FallenCoreMod;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 public class ModelDumper {
     private ICommandSender sender;
@@ -58,7 +57,7 @@ public class ModelDumper {
             Files.createDirectories(this.texturePath);
         } catch (IOException e) {
             e.printStackTrace();
-            sender.addChatMessage(new TextComponentString("Failed to create output directory"));
+            sender.sendMessage(new TextComponentString("Failed to create output directory"));
             return;
         }
 
@@ -69,7 +68,7 @@ public class ModelDumper {
                 .filter(v -> v != null)
                 .count();
 
-        sender.addChatMessage(new TextComponentString("Discovered " + total + " block states."));
+        sender.sendMessage(new TextComponentString("Discovered " + total + " block states."));
         for (Object o : blockStateIDMap) {
             IBlockState state = (IBlockState) o; //I have no idea why this broke...
             try {
@@ -80,11 +79,11 @@ public class ModelDumper {
             count++;
             if (count % 500 == 0) {
                 FallenCoreMod.logger.info("Dumping: " + count + "/" + total);
-                sender.addChatMessage(new TextComponentString("Dumping: " + count + "/" + total));
+                sender.sendMessage(new TextComponentString("Dumping: " + count + "/" + total));
             }
         }
 
-        sender.addChatMessage(new TextComponentString("Done."));
+        sender.sendMessage(new TextComponentString("Done."));
     }
 
     private void dumpState(IBlockState state) throws IOException {

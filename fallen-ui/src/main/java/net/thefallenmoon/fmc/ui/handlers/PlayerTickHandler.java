@@ -12,7 +12,7 @@ public class PlayerTickHandler {
     public void playerTick(TickEvent.PlayerTickEvent tick) {
         if (tick.side.isClient() && KeyInputHandler.openGui.isPressed()) {
             EntityPlayer player = tick.player;
-            player.openGui(FallenUIMod.instance, GuiTest.GUI_ID, player.worldObj, (int)player.posX, (int)player.posY, (int)player.posZ);
+            player.openGui(FallenUIMod.instance, GuiTest.GUI_ID, player.world, (int)player.posX, (int)player.posY, (int)player.posZ);
         }
     }
 }

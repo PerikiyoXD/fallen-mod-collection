@@ -17,17 +17,17 @@ import java.util.stream.Collectors;
 public class DumpModelCommand implements ICommand{
 
     @Override
-    public String getCommandName() {
+    public String getName() {
         return "fmc-dump-models";
     }
 
     @Override
-    public String getCommandUsage(ICommandSender iCommandSender) {
+    public String getUsage(ICommandSender iCommandSender) {
         return "fmc-dump-models <path>";
     }
 
     @Override
-    public List<String> getCommandAliases() {
+    public List<String> getAliases() {
         return new ArrayList<>();
     }
 
@@ -37,7 +37,7 @@ public class DumpModelCommand implements ICommand{
     }
 
     @Override
-    public List<String> getTabCompletionOptions(MinecraftServer minecraftServer, ICommandSender iCommandSender, String[] strings, @Nullable BlockPos blockPos) {
+    public List<String> getTabCompletions(MinecraftServer minecraftServer, ICommandSender iCommandSender, String[] strings, @Nullable BlockPos blockPos) {
         return new ArrayList<>();
     }
 
@@ -48,13 +48,13 @@ public class DumpModelCommand implements ICommand{
 
     @Override
     public int compareTo(ICommand o) {
-        return o.getCommandName().compareTo(getCommandName());
+        return o.getName().compareTo(getName());
     }
 
     @Override
     public void execute(MinecraftServer minecraftServer, final ICommandSender sender, String[] args) throws CommandException {
         if (args.length == 0) {
-            sender.addChatMessage(new TextComponentString("Must provide path"));
+            sender.sendMessage(new TextComponentString("Must provide path"));
             return;
         }
         new Thread(() -> {

@@ -1,5 +1,8 @@
 package net.thefallenmoon.fmc.ui.material.components;
 
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL20;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.VertexBuffer;
@@ -10,8 +13,6 @@ import net.thefallenmoon.fmc.ui.FallenUIMod;
 import net.thefallenmoon.fmc.ui.material.ComponentBase;
 import net.thefallenmoon.fmc.ui.material.ComponentBounds;
 import net.thefallenmoon.fmc.ui.material.bounds.StartEndComponentBounds;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL20;
 
 public class Paper extends ComponentBase {
     private float elevation;
@@ -94,9 +95,15 @@ public class Paper extends ComponentBase {
         float shadowSize = 50;
         float blur = elevation;
 
+        /*
+         * TODO: Unused stuff, what to do?
+         * 
+        
         int startAlpha = 255;
         int endAlpha = 0;
-
+        
+        */
+        
         ComponentBounds bounds = getBounds();
         ComponentBounds shadowBounds = new StartEndComponentBounds(
                 bounds.getX() - shadowSize,

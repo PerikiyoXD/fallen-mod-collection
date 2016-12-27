@@ -7,12 +7,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.thefallenmoon.fmc.core.render.ShaderProgram;
 import net.thefallenmoon.fmc.ui.handlers.KeyInputHandler;
 import net.thefallenmoon.fmc.ui.handlers.PlayerTickHandler;
 import net.thefallenmoon.fmc.ui.network.NetworkHandler;
 import net.thefallenmoon.fmc.ui.proxy.CommonProxy;
-import org.apache.logging.log4j.LogManager;
 
 @Mod(modid = FallenUIMod.MODID, version = FallenUIMod.VERSION)
 public class FallenUIMod {
