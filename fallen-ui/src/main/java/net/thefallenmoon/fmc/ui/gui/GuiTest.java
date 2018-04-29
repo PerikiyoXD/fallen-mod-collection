@@ -61,7 +61,7 @@ public class GuiTest extends GuiScreen {
     public void drawScreen(int x, int y, float f) {
         paperTest.setElevation((float) Math.abs((Math.sin(System.currentTimeMillis() / 1000.0) * 32)));
 
-        fontRendererObj.drawString("elevation " + paperTest.getElevation(), 0, 5, 0xFFFFFFFF);
+        fontRenderer.drawString("elevation " + paperTest.getElevation(), 0, 5, 0xFFFFFFFF);
         drawRect(0, 0, (int)paperTest.getElevation(), 3, 0xFFFFFFFF);
 
         //drawDefaultBackground();

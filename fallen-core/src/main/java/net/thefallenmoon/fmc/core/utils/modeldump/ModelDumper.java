@@ -27,7 +27,7 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ObjectIntIdentityMap;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraftforge.fml.common.registry.GameData;
+import net.minecraftforge.registries.GameData;
 import net.thefallenmoon.fmc.core.FallenCoreMod;
 
 public class ModelDumper {
